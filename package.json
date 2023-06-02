@@ -1,0 +1,42 @@
+{
+  "name": "aomd-ua",
+  "version": "0.0.2",
+  "author": "Aomd",
+  "main": "dist/umd/index.js",
+  "module": "dist/es/index.js",
+  "homepage": "https://github.com/wacky-idea/UserAgent#readme",
+  "description": "通过解析UA来得到用户终端信息",
+  "files": [
+    "dist",
+    "src",
+    "package.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wacky-idea/UserAgent.git"
+  },
+  "keywords": [
+    "user-agent",
+    "ua",
+    "浏览器信息"
+  ],
+  "bugs": {
+    "url": "https://github.com/wacky-idea/UserAgent/issues"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "build:browser": "browserify --standalone AomdUA ./dist/umd/index.js  > ./dist/aomd-ua.js",
+    "build:browser:min": "uglifyjs ./dist/aomd-ua.js > ./dist/aomd-ua.min.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "browserify": "^17.0.0",
+    "uglify-js": "^3.17.1",
+    "typescript": "^4.7.4",
+    "merge2": "^1.4.1"
+  },
+  "dependencies": {}
+}
