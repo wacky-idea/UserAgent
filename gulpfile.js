@@ -3,7 +3,6 @@ var gulp = require("gulp");
 var ts = require("gulp-typescript");
 var merge = require('merge2');
 
-
 gulp.task("build", parallel(buildAMD, buildUMD, buildES, buildCJS));
 
 gulp.task("build:AMD", buildAMD);
@@ -28,7 +27,7 @@ function buildCJS() {
 }
 
 function build(module = "AMD", dist = "amd") {
-  var tsconfig = ts.createProject("tsconfig.json", { module, removeComments: true });
+  var tsconfig = ts.createProject("tsconfig.json", { target: 'ES6', module, removeComments: false });
   var tsResult = tsconfig.src().pipe(tsconfig())
   return merge([
     tsResult.js.pipe(gulp.dest(`dist/${dist}`)),
