@@ -20,7 +20,7 @@ function buildUMD() {
 }
 
 function buildES() {
-  return build("ESNext", "es");
+  return build("ES2015", "es");
 }
 
 function buildCJS() {
