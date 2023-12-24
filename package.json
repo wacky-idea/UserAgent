@@ -6,8 +6,12 @@
   "module": "dist/es/index.js",
   "umd:main": "dist/umd/index.js",
   "typings": "src/index.ts",
-  "homepage": "https://github.com/wacky-idea/web-utils#readme",
-  "description": "通过解析UA来得到用户终端信息",
+  "homepage": "https://github.com/wacky-idea/UserAgent#readme",
+  "description": "通过解析 UA 来得到用户终端信息",
+  "directories": {
+    "src": "src",
+    "test": "test"
+  },
   "files": [
     "dist",
     "src",
@@ -16,15 +20,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wacky-idea/web-utils.git"
+    "url": "git+https://github.com/wacky-idea/UserAgent.git"
   },
   "keywords": [
     "user-agent",
     "ua",
-    "浏览器信息"
+    "浏览器信息解析"
   ],
   "bugs": {
-    "url": "https://github.com/wacky-idea/web-utils/issues"
+    "url": "https://github.com/wacky-idea/UserAgent/issues"
   },
   "scripts": {
     "build": "rollup -c",
